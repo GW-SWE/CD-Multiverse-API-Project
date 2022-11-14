@@ -16,7 +16,6 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 @SpringBootTest
 @AutoConfigureMockMvc
 public class UserControllerTest {
-
     @Autowired
     private MockMvc mvc;
     @Test
@@ -25,11 +24,13 @@ public class UserControllerTest {
                 "    \"id\": \"2\",  \n" +
                 "    \"name\":\"Steve\",\n" +
                 "    \"age\":\"32\",\n" +
+                "    \"password\":\"testpassword2\",\n" +
                 "    \"email\": \"steve@gmail.com\"  \n" +
-                "}   ";
+                            "}   ";
             mvc.perform(post("/user").contentType("application/json").content(user)).andExpect(status().isOk());
             mvc.perform(get("/user/2")).andExpect(status().isOk()).andExpect(jsonPath("$.name").value("Steve"));
             mvc.perform(get("/user/2")).andExpect(status().isOk()).andExpect(jsonPath("$.email").value("steve@gmail.com"));
-        }
 
+        }
+//TODO: check what happens with non matching userID
 }

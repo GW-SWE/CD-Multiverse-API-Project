@@ -20,6 +20,8 @@ public class User
     //defining age as column name
     @Column
     private int age;
+    @Column
+    private String password;
     //defining email as column name
     @Column
     private String email;
@@ -55,4 +57,13 @@ public class User
     {
         this.email = email;
     }
+    public String getPassword()
+    {
+        return password;
+    }
+    public void setPassword(String password)
+    {
+        this.password = password;
+    }
+
 }

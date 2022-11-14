@@ -43,7 +43,6 @@ public class UserController {
     {
         userService.saveOrUpdate(user);
         return user.getName();
-
     }
 
 }
