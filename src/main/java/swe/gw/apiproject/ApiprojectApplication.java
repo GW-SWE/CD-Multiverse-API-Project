@@ -1,7 +1,9 @@
 package swe.gw.apiproject;
 
 
+import java.sql.SQLException;
 import java.util.Arrays;
+
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -29,4 +31,5 @@ public class ApiprojectApplication {
 
 		};
 	}
+
 }

@@ -12,7 +12,7 @@ public class AuthenticationServiceTest {
     @Test
     public void ifNoUserNameOrPasswordDoNotStore(){
         AuthenticationService authenticationService = new AuthenticationService();
-        boolean isEncryptedNoUsername = authenticationService.encryptAndStore(null,password);
+        boolean isEncryptedNoUsername = authenticationService.encryptAndStore(null, password);
         boolean isEncryptedNoPassword = authenticationService.encryptAndStore(username, null);
         assertFalse(isEncryptedNoUsername);
         assertFalse(isEncryptedNoPassword);

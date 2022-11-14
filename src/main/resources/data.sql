@@ -1,0 +1,1 @@
+INSERT INTO USER (ID, NAME, AGE, EMAIL) VALUES (1, 'David Clarke', 37, 'david@getnada.com')
