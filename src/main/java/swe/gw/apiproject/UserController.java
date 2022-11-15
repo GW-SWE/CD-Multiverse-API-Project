@@ -41,6 +41,8 @@ public class UserController {
     @PostMapping("/user")
     private String saveUser(@RequestBody User user)
     {
+        //TODO Run encryption here and then use setter for password for hashed string
+        //TODO Appropriate ResponseEntity Response
         userService.saveOrUpdate(user);
         return user.getName();
     }
